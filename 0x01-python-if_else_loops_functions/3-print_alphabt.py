@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-for letter in range(ord('a'), ord('z')):
-    if letter == 'q':
-        continue
-    elif letter == 'e':
-        continue
-    else:
-        print(chr(letter), end="")
+for letter in range(97, 123):
+    if chr(letter) not in "qe":
+        print(f"{chr(letter)}", end="")
