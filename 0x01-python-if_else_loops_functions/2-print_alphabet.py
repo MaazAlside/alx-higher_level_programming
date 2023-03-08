@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for i in range(ord('a'), ord('z')+1):
-    print(chr(i), end="")
+for letter in range(26):
+        print("{:s}".format(chr(letter + ord("a"))), end="")
