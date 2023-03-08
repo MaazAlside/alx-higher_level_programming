@@ -2,10 +2,15 @@
 import random
 number = random.randint(-10000, 10000)
 last_num = abs(number) % 10
+
+if number < 0:
+    last_num *= -1
+
 if last_num > 5:
     suffix = "and is greater than 5"
 elif last_num == 0:
     suffix = "and is 0"
 else:
     suffix = f"and is less than 6 and not 0"
+
 print(f"Last digit of {number} is {last_num} {suffix}")
