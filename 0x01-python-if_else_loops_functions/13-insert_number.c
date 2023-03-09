@@ -2,14 +2,14 @@
 
 /**
   * insert_node - inserts a number into a sorted singly linked list.
-  *@head: first node
-  *@number: number to add
+  *@head: Double pointer to head of the list.
+  *@number: Integer value to insert.
   *
-  *Return: linked list
+  *Return: Address of the new node, or NULL if it failed.
   */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *new_node, *current_node;
+	listint_t *new_node, *current_node = *head;
 
 	if (!head)
 		return (NULL);
