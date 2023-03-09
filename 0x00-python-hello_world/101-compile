@@ -1,12 +1,2 @@
 #!/bin/bash
-
-pyfile=$PYFILE
-
-python -m py_compile $pyfile
-
-compiled=$(echo $pyfile | sed 's/\.[^.]*$/.pyc/')
-mv __pycache__/${pyfile%.py}.cpython-*.pyc $compiled
-
-echo "Compiling $pyfile ..."
-echo "Compiled output: $compiled"
-
+python3 -m compileall -b $PYFILE i
