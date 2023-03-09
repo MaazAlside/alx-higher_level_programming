@@ -1,11 +1,12 @@
-#!/usr/bin/python3
-import os
-import py_compile
+#!/bin/bash
 
-pyfile = os.environ.get('PYFILE')
-if not pyfile:
-    print("Error: PYFILE environment variable not set")
-    exit(1)
+pyfile=$PYFILE
 
-print("Compiling {} ...".format(pyfile))
-py_compile.compile(pyfile, cfile=pyfile + 'c')
+python -m py_compile $pyfile
+
+compiled=$(echo $pyfile | sed 's/\.[^.]*$/.pyc/')
+mv __pycache__/${pyfile%.py}.cpython-*.pyc $compiled
+
+echo "Compiling $pyfile ..."
+echo "Compiled output: $compiled"
+
