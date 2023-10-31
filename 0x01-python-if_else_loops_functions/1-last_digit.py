@@ -2,7 +2,8 @@
 import random
 number = random.randint(-10000, 10000)
 last_number = int(repr(number)[-1])
-if (number < 0): last_number *= -1
+if (number < 0):
+    last_number *= -1
 if (last_number > 5):
     last_text = "and is greater than 5"
 elif (last_number == 0):
