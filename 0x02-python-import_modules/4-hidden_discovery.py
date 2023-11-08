@@ -1,15 +1,8 @@
-import dis
-import marshal
+#!/usr/bin/python3.8
+import hidden_4
 
-def main():
-    with open('hidden_4.pyc', 'rb') as pyc_file:
-        code_object = marshal.load(pyc_file)
-
-    names = [name for name in code_object.co_names if not name.startswith('__')]
-    names.sort()
-
-    for name in names:
-        print(name)
-
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    names = dir(hidden_4)
+    for name in sorted(names):
+        if not name.startswith("__"):
+            print(name)
