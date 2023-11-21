@@ -5,7 +5,3 @@ class Square:
     Represents a square.
 
     """
-
-    def __init__(self):
-        """
-        Initializes a new square.
