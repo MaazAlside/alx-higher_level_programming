@@ -5,15 +5,18 @@
 
 class Square:
     """class Square that defines a square
-
+    
     Attributes:
-    __size : private square size
+        __size (int): the size of Square.
+        __position (tuple): The position of the square.
+        
     """
     def __init__(self, size=0, position=(0, 0)):
         """Initialize a new Square
 
         Args:
-        size (int): the size of Square
+            size (int): the size of the Square.
+            position (tuple): The position of the square.
         """
         try:
             if size < 0:
