@@ -1,13 +1,11 @@
 #!/usr/bin/python3
+
 class Square:
     """
-    A Class Square
-    Attributes:
-    Nothing
-"""
+    Represents a square.
+
+    """
+
     def __init__(self):
         """
-        Initialize a new Square
-        Args:
-        Nothing
-        """
+        Initializes a new square.
