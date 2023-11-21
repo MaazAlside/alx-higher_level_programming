@@ -24,7 +24,7 @@ class Square:
         except TypeError:
             raise TypeError("size must be an integer")
         self.__size = int(size)
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
@@ -65,6 +65,8 @@ class Square:
         if self.__size == 0:
             print()
         else:
+            for i in range(self.__position[1]):
+                print()
             for i in range(self.__size):
                 print(" " * self.position[0], end="")
-                print("#" * self.__size)
+                print("#" * self.size)
