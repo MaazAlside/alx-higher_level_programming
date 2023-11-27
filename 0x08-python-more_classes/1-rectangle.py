@@ -13,8 +13,13 @@ class Rectangle:
     """
     def __init__(self, width=0, height=0):
         """ set the values """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
+
+    @property
+    def height(self):
+        """ retrieve the height value """
+        return self.__height
 
     @property
     def width(self):
@@ -31,11 +36,6 @@ class Rectangle:
         else:
             self.__width = value
 
-    @property
-    def height(self):
-        """ retrieve the height value """
-        return self.__height
-
     @height.setter
     def height(self, value):
         """ Set the the height value """
@@ -45,3 +45,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def __str__(self):
+        """Return a string representation of the Rectangle"""
+        return "{{'_Rectangle__height': {}, '_Rectangle__width': {}}}".format(
+            self.__height, self.__width)
