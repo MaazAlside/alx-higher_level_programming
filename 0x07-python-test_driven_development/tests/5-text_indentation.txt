@@ -1,0 +1,52 @@
+"""
+The ``text_indentation`` function
+================================
+
+This is a function that prints a text with 2 new lines after '.', '?', and ':'.
+
+Using  ``text_indentation``
+---------------------------
+
+Import the ``text_indentation`` function
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Print text with two new lines after '.':
+
+>>> text_indentation("Hello. This is a test.")
+Hello.
+<BLANKLINE>
+This is a test.
+<BLANKLINE>
+
+Print text with two new lines after '?':
+
+>>> text_indentation("What is this?")
+What is this?
+<BLANKLINE>
+
+Print text with two new lines after ':':
+
+>>> text_indentation("Here is the result:")
+Here is the result:
+<BLANKLINE>
+
+Print text with two new lines after multiple '.', '?', and ':':
+
+>>> text_indentation("This. Is? A: Test.")
+This.
+<BLANKLINE>
+Is?
+<BLANKLINE>
+A:
+<BLANKLINE>
+Test.
+<BLANKLINE>
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+"""
+
