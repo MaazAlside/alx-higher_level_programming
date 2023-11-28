@@ -1,0 +1,41 @@
+# ./tests/4-print_square.txt
+
+"""
+The ``print_square`` function
+=============================
+
+function that prints a square with the character #.
+
+Usage ``print_squar``
+
+>>> print_square = __import__('4-print_square').print_square
+
+Test1: with integer number
+>>> print_square(4)
+####
+####
+####
+####
+
+
+Test2: with string input
+>>> print_square("hi")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+
+Test3: with nagative number
+>>> print_square(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+
+Test: with float number:
+>>> print_square(0.4)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+"""
