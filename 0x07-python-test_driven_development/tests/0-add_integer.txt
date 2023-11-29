@@ -40,29 +40,60 @@ Add with strings:
 
 >>> add_integer("hello", 6)
 Traceback (most recent call last):
-    ...
 TypeError: a must be an integer
 
 >>> add_integer(6, "hi")
 Traceback (most recent call last):
-    ...
 TypeError: b must be an integer
 
 Add with None:
 
 >>> add_integer(None, 6)
 Traceback (most recent call last):
-    ...
 TypeError: a must be an integer
 
 >>> add_integer(6, None)
 Traceback (most recent call last):
-    ...
 TypeError: b must be an integer
 
 >>> add_integer(None)
 Traceback (most recent call last):
-    ...
 TypeError: a must be an integer
 
+
+Both arguments string invalid: 
+
+>>> add_integer("hello", "there")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+
+The function will fail if infinity is provided.
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+
+with NaN numbers.
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+
+>>> add_integer(2, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
 """
+
+
+
