@@ -36,6 +36,24 @@ Add float numbers:
 >>> add_integer(5, 1.9)
 6
 
+>>> add_integer(2.0, 3.0)
+5
+
+>>> add_integer(2.9, 0.2)
+2
+
+>>> add_integer(-2.9, -0.2)
+-2
+
+>>> add_integer(2.3, -3)
+-1
+
+
+with one arguement the secont in optional
+
+>>> add_integer(2)
+100
+
 Add with strings:
 
 >>> add_integer("hello", 6)
