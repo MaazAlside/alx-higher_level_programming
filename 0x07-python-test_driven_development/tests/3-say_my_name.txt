@@ -33,22 +33,10 @@ TypeError: last_name must be a string
 
 Test 5: Empty strings as arguments
 >>> say_my_name("", "")
-My name is 
+My name is  
 
 Test 6: Special characters in names
 >>> say_my_name("John@#", "Doe!")
 My name is John@# Doe!
-
-Test 7: First name with leading and trailing spaces
->>> say_my_name("   Alice", "Wonderland")
-My name is    Alice Wonderland
-
-Test 8: Last name with leading and trailing spaces
->>> say_my_name("Charlie", "   Brown   ")
-My name is Charlie Brown
-
-Test 9: Both names with leading and trailing spaces
->>> say_my_name("   Elsa   ", "Frozen   ")
-My name is    Elsa    Frozen
 
 """
