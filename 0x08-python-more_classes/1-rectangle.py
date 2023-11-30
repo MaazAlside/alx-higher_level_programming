@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Rectangle that defines a rectangle"""
 
 
@@ -9,7 +8,6 @@ class Rectangle:
     args:
     width (int): Private instance attribute
     height (int): Private instance attribute
-
     """
     def __init__(self, width=0, height=0):
         """Set the values"""
