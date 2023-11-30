@@ -39,4 +39,8 @@ Test 6: Special characters in names
 >>> say_my_name("John@#", "Doe!")
 My name is John@# Doe!
 
+# Test 8: Last name with leading and trailing spaces
+>>> say_my_name("Charlie", "   Brown   ")
+My name is Charlie Brown
+
 """
