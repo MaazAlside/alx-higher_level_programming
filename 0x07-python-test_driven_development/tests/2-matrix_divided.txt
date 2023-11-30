@@ -43,3 +43,19 @@ Test 5: divided by 0
 Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
+
+Test 6: Normal case with decimal result
+>>> matrix_divided([[10, 20, 30], [40, 50, 60]], 2)
+[[5.0, 10.0, 15.0], [20.0, 25.0, 30.0]]
+
+Test 7: Matrix with all zeros
+>>> matrix_divided([[0, 0], [0, 0]], 5)
+[[0.0, 0.0], [0.0, 0.0]]
+
+Test 8: NaN as divisor
+>>> matrix_divided([[1, 2], [3, 4]], float('nan'))
+[[nan, nan], [nan, nan]]
+
+Test 9: Negative divisor
+>>> matrix_divided([[1, 2], [3, 4]], -2)
+[[-0.5, -1.0], [-1.5, -2.0]]
