@@ -60,12 +60,10 @@ class Rectangle:
     def __str__(self):
         """print the rectangle with the character #"""
         if self.__width == 0 or self.__height == 0:
-            return str(None)
-        else:
-            result = ""
-            for i in range(self.__height):
-                for j in range(self.width):
-                    result += "#"
-                if i < self.__height - 1:
-                    result += "\n"
-            return result
+            return ""
+        result = ""
+        for i in range(self.height):
+            result += "#" * self.width
+            if i < self.height - 1:
+                result += "\n"
+        return result
