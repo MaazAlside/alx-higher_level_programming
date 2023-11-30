@@ -59,3 +59,17 @@ Test 8: NaN as divisor
 Test 9: Negative divisor
 >>> matrix_divided([[1, 2], [3, 4]], -2)
 [[-0.5, -1.0], [-1.5, -2.0]]
+
+Test 10: Large matrix with large divisor
+>>> matrix_divided([[1000000, 2000000], [3000000, 4000000]], 1000000)
+[[1.0, 2.0], [3.0, 4.0]]
+
+Test 11: Matrix with negative numbers
+>>> matrix_divided([[-1, -2], [-3, -4]], 2)
+[[-0.5, -1.0], [-1.5, -2.0]]
+
+Test 12: Decimal divisor
+>>> matrix_divided([[1, 2], [3, 4]], 0.5)
+[[2.0, 4.0], [6.0, 8.0]]
+
+"""
