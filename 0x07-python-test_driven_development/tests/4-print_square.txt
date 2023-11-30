@@ -10,7 +10,7 @@ Usage ``print_squar``
 
 >>> print_square = __import__('4-print_square').print_square
 
-Test1: with integer number
+# Test1: with integer number
 >>> print_square(4)
 ####
 ####
@@ -18,24 +18,62 @@ Test1: with integer number
 ####
 
 
-Test2: with string input
+# Test2: with string input
 >>> print_square("hi")
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
 
 
-Test3: with nagative number
+# Test3: with nagative number
 >>> print_square(-1)
 Traceback (most recent call last):
     ...
 ValueError: size must be >= 0
 
 
-Test: with float number:
+# Test4: with float number:
 >>> print_square(0.4)
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
 
-"""
+# Test 5: Square of size 1
+>>> print_square(1)
+#
+
+# Test 6: Square of size 0
+>>> print_square(0)
+
+
+# Test 7: Square of size 5
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+# Test 8: Square of size 2
+>>> print_square(2)
+##
+##
+
+# Test 9: Square of size 3
+>>> print_square(3)
+###
+###
+###
+
+# Test 10: Square of size 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
