@@ -72,4 +72,20 @@ Test 12: Decimal divisor
 >>> matrix_divided([[1, 2], [3, 4]], 0.5)
 [[2.0, 4.0], [6.0, 8.0]]
 
+Test 13: Empty matrix
+>>> matrix_divided([], 2)
+[]
+
+Test 14: Matrix with one row and one element
+>>> matrix_divided([[5]], 2)
+[[2.5]]
+
+Test 15: Matrix with negative divisor
+>>> matrix_divided([[1, 2], [3, 4]], -0.5)
+[[-2.0, -4.0], [-6.0, -8.0]]
+
+Test 16: Matrix with mixed integers and floats
+>>> matrix_divided([[1.5, 2.5], [3, 4]], 2)
+[[0.75, 1.25], [1.5, 2.0]]
+
 """
