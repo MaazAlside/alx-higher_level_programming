@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+"""class MyList that inherits from list"""
+
+
 class MyList(list):
     """
     MyList is a custom class that extends the built-in list class.
