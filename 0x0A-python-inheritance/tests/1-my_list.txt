@@ -98,5 +98,40 @@ Import the ``MyList`` class
 >>> my_list.print_sorted()
 ['A', 'B', 'a', 'b', 'c']
 
+# Test case 19: Initialize with a mix of ASCII characters and print_sorted
+>>> my_list = MyList(['c', 'a', 'b', 'A', 'B'])
+>>> my_list.print_sorted()
+['A', 'B', 'a', 'b', 'c']
+
+# Test case 20: Initialize with a mix of uppercase and lowercase letters and print_sorted
+>>> my_list = MyList(['z', 'X', 'y', 'Q', 'w'])
+>>> my_list.print_sorted()
+['Q', 'X', 'w', 'y', 'z']
+
+# Test case 21: Initialize with a mix of positive and negative floats and print_sorted
+>>> my_list = MyList([-1.5, 2.0, -0.5, 1.0, -2.0])
+>>> my_list.print_sorted()
+[-2.0, -1.5, -0.5, 1.0, 2.0]
+
+# Test case 22: Initialize with an arithmetic progression and print_sorted
+>>> my_list = MyList(range(10))
+>>> my_list.print_sorted()
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Test case 23: Initialize with a mix of negative and positive even and odd numbers and print_sorted
+>>> my_list = MyList([-3, 2, -4, 1, -6, 5, -8, 3])
+>>> my_list.print_sorted()
+[-8, -6, -4, -3, 1, 2, 3, 5]
+
+# Test case 24: Initialize with a mix of negative and positive even and odd integers and print_sorted
+>>> my_list = MyList([-2, 3, -4, 1, -6, 5, -8, 2])
+>>> my_list.print_sorted()
+[-8, -6, -4, -2, 1, 2, 3, 5]
+
+# Test case 25: Initialize with a mix of uppercase and lowercase letters and print_sorted
+>>> my_list = MyList(['Z', 'X', 'Y', 'Q', 'W'])
+>>> my_list.print_sorted()
+['Q', 'W', 'X', 'Y', 'Z']
+
 """
 
