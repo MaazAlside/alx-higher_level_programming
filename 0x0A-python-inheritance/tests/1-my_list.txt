@@ -93,5 +93,10 @@ Import the ``MyList`` class
 >>> my_list.print_sorted()
 [-3.5, -2.8, 0.9, 1.2, 4.5]
 
+# Test case 18: Initialize with a mix of ASCII characters and print_sorted
+>>> my_list = MyList(['c', 'a', 'b', 'A', 'B'])
+>>> my_list.print_sorted()
+['A', 'B', 'a', 'b', 'c']
+
 """
 
