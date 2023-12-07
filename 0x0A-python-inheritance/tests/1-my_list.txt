@@ -1,0 +1,97 @@
+"""
+The ``MyList`` class
+====================
+
+This is a custom class that extends the built-in list class.
+
+Using  ``MyList``
+-----------------
+
+Import the ``MyList`` class
+
+>>> MyList = __import__('1-my_list').MyList
+
+# Test case 1: Initialize an empty instance
+>>> my_list = MyList()
+>>> my_list
+[]
+
+# Test case 2: Initialize with values
+>>> my_list = MyList([1, 4, 2, 3, 5])
+>>> my_list
+[1, 4, 2, 3, 5]
+
+# Test case 3: Print the sorted list
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test case 4: Original list after print_sorted remains unchanged
+>>> my_list
+[1, 4, 2, 3, 5]
+
+# Test case 5: Initialize with values and print_sorted
+>>> my_list = MyList([5, 3, 7, 1, 9])
+>>> my_list.print_sorted()
+[1, 3, 5, 7, 9]
+
+# Test case 6: Original list after print_sorted remains unchanged
+>>> my_list
+[5, 3, 7, 1, 9]
+
+# Test case 7: Initialize an empty instance and print_sorted
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+# Test case 8: Initialize with a single element and print_sorted
+>>> my_list = MyList([42])
+>>> my_list.print_sorted()
+[42]
+
+# Test case 9: Initialize with repeated values and print_sorted
+>>> my_list = MyList([3, 2, 3, 1, 2, 1])
+>>> my_list.print_sorted()
+[1, 1, 2, 2, 3, 3]
+
+# Test case 10: Initialize with negative values and print_sorted
+>>> my_list = MyList([-5, -2, -8, -1, -3])
+>>> my_list.print_sorted()
+[-8, -5, -3, -2, -1]
+
+# Test case 11: Initialize with a mix of positive and negative values and print_sorted
+>>> my_list = MyList([8, -4, 2, -6, 1, 0, -3])
+>>> my_list.print_sorted()
+[-6, -4, -3, 0, 1, 2, 8]
+
+# Test case 12: Initialize with zero and print_sorted
+>>> my_list = MyList([0])
+>>> my_list.print_sorted()
+[0]
+
+# Test case 13: Initialize with an already sorted list and print_sorted
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test case 14: Initialize with an empty list and print_sorted
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+
+# Test case 15: Initialize with large numbers and print_sorted
+>>> my_list = MyList([1000, 500, 200, 100, 900])
+>>> my_list.print_sorted()
+[100, 200, 500, 900, 1000]
+
+# Test case 16: Initialize with repeated large numbers and print_sorted
+>>> my_list = MyList([1000, 1000, 1000, 1000, 1000])
+>>> my_list.print_sorted()
+[1000, 1000, 1000, 1000, 1000]
+
+# Test case 17: Initialize with negative and positive decimal values and print_sorted
+>>> my_list = MyList([-3.5, 1.2, -2.8, 0.9, 4.5])
+>>> my_list.print_sorted()
+[-3.5, -2.8, 0.9, 1.2, 4.5]
+
+"""
+

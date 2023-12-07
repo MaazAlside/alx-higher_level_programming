@@ -12,23 +12,7 @@ class MyList(list):
     Attributes:
         No additional attributes are defined.
 
-    Methods:
-        __init__: Initializes an instance of the MyList class.
-        print_sorted: Prints the elements of the list in sorted order.
     """
-
-    def __init__(self):
-        """
-        Initialize an instance of the MyList class.
-
-        Parameters:
-            *args: Variable-length argument list,
-            allowing the initialization of the list with values.
-
-        Returns:
-            None
-        """
-        super(MyList, self).__init__()
 
     def print_sorted(self):
         """
@@ -40,5 +24,4 @@ class MyList(list):
         Returns:
             None
         """
-        sortedlist = sorted(self)
-        print(sortedlist)
+        print(sorted(self))
