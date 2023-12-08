@@ -15,5 +15,5 @@ def write_file(filename="", text=""):
     """
     with open(filename, mode="w", encoding="utf-8") as file:
         file.write(text)
-        char_count = len(text) + text.count("\n") + text.count(" ")
-    return char_count
+
+        return len(text) + text.count("\n") + text.count(" ")
