@@ -10,4 +10,4 @@ def read_file(filename=""):
     :param filename: The name of the file to be read.
     """
     with open(filename, encoding="utf-8") as file:
-        print(file.read())
+        print(file.read(), end="")
