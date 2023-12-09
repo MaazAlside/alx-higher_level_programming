@@ -1,0 +1,78 @@
+# ./tests/7-base_geometry.txt
+
+"""
+The ``BaseGeometry`` class
+==========================
+
+This is a base class with an empty implementation for area() and a method integer_validator().
+
+Usage ``BaseGeometry``
+-----------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Test 1: Initialize an instance of BaseGeometry
+>>> base_geom = BaseGeometry()
+>>> base_geom.__dict__
+{}
+
+# Test 2: Call area() method, which should raise an exception
+>>> try:
+...     base_geom.area()
+... except Exception as e:
+...     print(str(e))
+area() is not implemented
+
+# Test 3: Call integer_validator() with a valid integer value
+>>> base_geom.integer_validator("test", 42)
+>>> base_geom.__dict__
+{}
+
+# Test 4: Call integer_validator() with a non-integer value (should raise TypeError)
+>>> try:
+...     base_geom.integer_validator("test", "42")
+... except TypeError as e:
+...     print(str(e))
+test must be an integer
+
+# Test 5: Call integer_validator() with a non-positive integer value (should raise ValueError)
+>>> try:
+...     base_geom.integer_validator("test", 0)
+... except ValueError as e:
+...     print(str(e))
+test must be greater than 0
+
+# Test 6: Call integer_validator() with a negative integer value (should raise ValueError)
+>>> try:
+...     base_geom.integer_validator("test", -42)
+... except ValueError as e:
+...     print(str(e))
+test must be greater than 0
+
+# Test 7: Call integer_validator() with a valid float value (should raise TypeError)
+>>> try:
+...     base_geom.integer_validator("test", 42.5)
+... except TypeError as e:
+...     print(str(e))
+test must be an integer
+
+# Test 8: Call integer_validator() with a valid boolean value (should raise TypeError)
+>>> try:
+...     base_geom.integer_validator("test", True)
+... except TypeError as e:
+...     print(str(e))
+test must be an integer
+
+# Test 9: Call integer_validator() with a valid string representing an integer value
+>>> base_geom.integer_validator("test", "42")
+>>> base_geom.__dict__
+{}
+
+# Test 10: Call integer_validator() with a string representing a non-integer value (should raise TypeError)
+>>> try:
+...     base_geom.integer_validator("test", "abc")
+... except TypeError as e:
+...     print(str(e))
+test must be an integer
+
+"""
