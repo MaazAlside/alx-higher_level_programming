@@ -17,62 +17,105 @@ Usage ``BaseGeometry``
 {}
 
 # Test 2: Call area() method, which should raise an exception
->>> try:
-...     base_geom.area()
-... except Exception as e:
-...     print(str(e))
-area() is not implemented
+>>> b = BaseGeometry()
+>>> b.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented
 
-# Test 3: Call integer_validator() with a valid integer value
->>> base_geom.integer_validator("test", 42)
->>> base_geom.__dict__
-{}
+# Test 3: Checking too many arguments for area:
+>>> b.area(1)
+Traceback (most recent call last):
+  ...
+TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
 
-# Test 4: Call integer_validator() with a non-integer value (should raise TypeError)
->>> try:
-...     base_geom.integer_validator("test", "42")
-... except TypeError as e:
-...     print(str(e))
-test must be an integer
+# Test 4: Checking integer validator for passing integer:
+>>> b.integer_validator("integer", 1)
 
-# Test 5: Call integer_validator() with a non-positive integer value (should raise ValueError)
->>> try:
-...     base_geom.integer_validator("test", 0)
-... except ValueError as e:
-...     print(str(e))
-test must be greater than 0
+# Test 5: Checking for integer == 0:
+>>> b.integer_validator("integer", 0)
+Traceback (most recent call last):
+  ...
+ValueError: integer must be greater than 0
 
-# Test 6: Call integer_validator() with a negative integer value (should raise ValueError)
->>> try:
-...     base_geom.integer_validator("test", -42)
-... except ValueError as e:
-...     print(str(e))
-test must be greater than 0
+# Test 6: Checking for integer < 0;
+>>> b.integer_validator("integer", -5)
+Traceback (most recent call last):
+  ...
+ValueError: integer must be greater than 0
 
-# Test 7: Call integer_validator() with a valid float value (should raise TypeError)
->>> try:
-...     base_geom.integer_validator("test", 42.5)
-... except TypeError as e:
-...     print(str(e))
-test must be an integer
+# Test 7: Checking for non-integer types:
+>>> b.integer_validator("bool", True)
+Traceback (most recent call last):
+  ...
+TypeError: bool must be an integer
 
-# Test 8: Call integer_validator() with a valid boolean value (should raise TypeError)
->>> try:
-...     base_geom.integer_validator("test", True)
-... except TypeError as e:
-...     print(str(e))
-test must be an integer
+>>> b.integer_validator("float", 1.5)
+Traceback (most recent call last):
+  ...
+TypeError: float must be an integer
 
-# Test 9: Call integer_validator() with a valid string representing an integer value
->>> base_geom.integer_validator("test", "42")
->>> base_geom.__dict__
-{}
+>>> b.integer_validator("complex", complex(1, 1))
+Traceback (most recent call last):
+  ...
+TypeError: complex must be an integer
 
-# Test 10: Call integer_validator() with a string representing a non-integer value (should raise TypeError)
->>> try:
-...     base_geom.integer_validator("test", "abc")
-... except TypeError as e:
-...     print(str(e))
-test must be an integer
+>>> b.integer_validator("string", "hello")
+Traceback (most recent call last):
+  ...
+TypeError: string must be an integer
+
+>>> b.integer_validator("tuple", (1, 2))
+Traceback (most recent call last):
+  ...
+TypeError: tuple must be an integer
+
+>>> b.integer_validator("list", [1, 2, 3])
+Traceback (most recent call last):
+  ...
+TypeError: list must be an integer
+
+>>> b.integer_validator("dict", {"key": "value"})
+Traceback (most recent call last):
+  ...
+TypeError: dict must be an integer
+
+>>> b.integer_validator("set", {"hello", "world"})
+Traceback (most recent call last):
+  ...
+TypeError: set must be an integer
+
+>>> b.integer_validator("frozenset", frozenset(["hello", "world"]))
+Traceback (most recent call last):
+  ...
+TypeError: frozenset must be an integer
+
+>>> b.integer_validator("bytes", b"bytes")
+Traceback (most recent call last):
+  ...
+TypeError: bytes must be an integer
+
+>>> b.integer_validator("bytearrays", bytearray(b"bytes"))
+Traceback (most recent call last):
+  ...
+TypeError: bytearrays must be an integer
+
+# Test 8: Checking for no arguments to integer_validator:
+>>> b.integer_validator()
+Traceback (most recent call last):
+  ...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Test 9: Checking for only 1 argument to integer_validator:
+>>> b.integer_validator("integer")
+Traceback (most recent call last):
+  ...
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+# Test 10: Checking for too many arguments:
+>>> b.integer_validator("integer", 1, 2)
+Traceback (most recent call last):
+  ...
+TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
 """
