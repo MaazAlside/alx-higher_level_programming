@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-
-"""an empty class """
+"""
+Correction of "7. Integer validator
+"""
 
 
 class BaseGeometry:
-    """Empty Class """
-
-    def __init__(self):
-        """inilize the opject"""
-        pass
+    """A class with public instance methods area and integer_validator"""
 
     def area(self):
         """area not emplemented"""
