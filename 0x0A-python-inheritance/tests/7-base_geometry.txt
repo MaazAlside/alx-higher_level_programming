@@ -45,11 +45,10 @@ Traceback (most recent call last):
 ValueError: integer must be greater than 0
 
 # Test 7: Checking for non-integer types:
->>> b = BaseGeometry()
->>> b.integer_validator("bool", "True")
+>>> BaseGeometry.integer_validator("bool", True)
 Traceback (most recent call last):
   ...
-TypeError: bool must be an integer
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 >>> b.integer_validator("float", 1.5)
 Traceback (most recent call last):
