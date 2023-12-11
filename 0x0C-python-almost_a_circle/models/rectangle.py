@@ -21,3 +21,60 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
+
+        @property
+    def width(self):
+        """Get the width of the rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Set the width of the rectangle.
+
+        Args:
+            value (int): The width to set.
+        """
+        self.__width = value
+
+    @property
+    def height(self):
+        """Get the height of the rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Set the height of the rectangle.
+
+        Args:
+            value (int): The height to set.
+        """
+        self.__height = value
+
+    @property
+    def x(self):
+        """Get the x-coordinate of the rectangle's position."""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Set the x-coordinate of the rectangle's position.
+
+        Args:
+            value (int): The x-coordinate to set.
+        """
+        self.__x = value
+
+    @property
+    def y(self):
+        """Get the y-coordinate of the rectangle's position."""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Set the y-coordinate of the rectangle's position.
+
+        Args:
+            value (int): The y-coordinate to set.
+        """
+        self.__y = value
+
