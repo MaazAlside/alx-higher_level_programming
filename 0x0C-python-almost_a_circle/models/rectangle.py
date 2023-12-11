@@ -77,4 +77,3 @@ class Rectangle(Base):
             value (int): The y-coordinate to set.
         """
         self.__y = value
-
