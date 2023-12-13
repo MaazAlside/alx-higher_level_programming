@@ -32,5 +32,11 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """Save a list of instances to a JSON file."""
-        with open("Rectangle.json", 'w') as file:
-            json.dump([obj.to_dictionary() for obj in list_objs], file)
+        fname = cls.__name__ + ".json"
+        with open(fname, 'w') as file:
+            file.write(
+                    cls.to_json_string(
+                        [obj.to_dictionary() for obj in list_objs]
+                        if list_objs
+                        else [])
+                       )
