@@ -39,4 +39,11 @@ class Base:
                         [obj.to_dictionary() for obj in list_objs]
                         if list_objs
                         else [])
-                       )
+                    )
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Convert a JSON-formatted string to list represented """
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        return json.loads(json_string)
