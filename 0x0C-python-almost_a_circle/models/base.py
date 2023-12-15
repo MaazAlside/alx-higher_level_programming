@@ -53,15 +53,15 @@ class Base:
         """Create a Rectangle instance
 
         Args:
-            **dictionary: Keyword arguments
-        
+        **dictionary: Keyword arguments
+
         Returns:
-            Rectangle: An instance of the Rectangle class
+        Rectangle: An instance of the Rectangle class
         """
         if dictionary is not None and dictionary != {}:
             if cls.__name__ == "Square":
-                instance = cls(size = 5)
+                instance = cls(size=5)
             else:
-                instance = cls(width = 4, height = 5)
+                instance = cls(width=4, height=5)
             instance.update(**dictionary)
             return instance
