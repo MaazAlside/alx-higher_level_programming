@@ -45,5 +45,5 @@ class Base:
     def from_json_string(json_string):
         """Convert a JSON-formatted string to list represented """
         if json_string is None or json_string == "":
-            return "[]"
+            return []
         return json.loads(json_string)
