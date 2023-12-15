@@ -50,7 +50,18 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """returns an instance with all attributes already set"""
-        dummy_instance = cls(width=10, height=5)
-        dummy_instance.update(**dictionary)
-        return dummy_instance
+        """Create a Rectangle instance
+
+        Args:
+            **dictionary: Keyword arguments
+        
+        Returns:
+            Rectangle: An instance of the Rectangle class
+        """
+        if dictionary is not None and dictionary != {}:
+            if cls.__name__ == "Square":
+                instance = cls(size = 5)
+            else:
+                instance = cls(width = 4, height = 5)
+            instance.update(**dictionary)
+            return instance
