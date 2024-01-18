@@ -5,3 +5,4 @@ WHERE month IN ('July', 'August')
 ORDER BY avg_temp
 DESC
 LIMIT 3;
+

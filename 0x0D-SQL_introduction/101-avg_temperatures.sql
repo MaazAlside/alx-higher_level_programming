@@ -2,3 +2,4 @@
 SELECT AVG(value) AS avg_temp
 FROM temperatures
 WHERE BY city DESC;
+
