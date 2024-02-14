@@ -6,11 +6,11 @@ class Square extends _Square {
       super.print();
     } else {
       for (let i = 0; i < this.height; i++) {
-        let sympol = '';
+        let symbol = '';
         for (let j = 0; j < this.width; j++) {
-          sympol += c;
+          symbol += c;
         }
-        console.log(sympol);
+        console.log(symbol);
       }
     }
   }
