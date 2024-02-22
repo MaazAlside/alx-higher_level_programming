@@ -10,14 +10,15 @@ if __name__ == '__main__':
     state = sys.argv[4]
 
     db = MySQLdb.connect(
-        host = 'localhost',
+        host='localhost',
         port=3306,
         user=username,
         passwd=password,
         db=database
     )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state))
+    cur.execute(
+        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state))
 
     result = cur.fetchall()
 
