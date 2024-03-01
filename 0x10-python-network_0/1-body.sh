@@ -1,3 +1,3 @@
 #!/bin/bash
 # script that takes in a URL, sends a GET request to the
-curl -sI "$1" | grep -i 'HTTP/1.1 200' > /dev/null && curl -s "$1"
+curl -s -I "$1" | awk 'NR==1 && $2==200 {getline; print}' | curl -s "$1"
