@@ -10,6 +10,6 @@ if __name__ == '__main__':
 
     data = urllib.parse.urlencode({'email': email_value}).encode('utf')
 
-    req = urllib.request.Request(url, data=data)
+    req = urllib.request.Request(url, data=data, method='POST')
     with urllib.request.urlopen(req) as response:
         print("Your email is: " + response.read().decode())
