@@ -8,7 +8,7 @@ if __name__ == '__main__':
     url = sys.argv[1]
     email_value = sys.argv[2]
 
-    data = urllib.parse.urlencode({'email': email}).encode('utf')
+    data = urllib.parse.urlencode({'email': email_value}).encode('utf')
 
     req = urllib.request.Request(url, data=data)
     with urllib.request.urlopen(req) as response:
